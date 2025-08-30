@@ -1,0 +1,18 @@
+name: Gosec scan workflow
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  gosec-codescan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Gosec scan
+        uses: cloudbees-io-gha/gosec-scan-publish@v1
+        with:
+          cloudbees-url: https://api.saas-qa.beescloud.com
