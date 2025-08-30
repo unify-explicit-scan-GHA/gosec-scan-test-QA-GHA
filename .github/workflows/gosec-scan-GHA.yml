@@ -1,4 +1,4 @@
-name: Gitleaks scan via GHA
+name: Gosec scan via GHA
 
 on:
     push:
